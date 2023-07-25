@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94E9D9DA-2281-4622-A9B1-554A4C3047C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Klijent</RootNamespace>
+    <AssemblyName>Klijent</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Klijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klijent.Designer.cs">
+      <DependentUpon>Klijent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Komunikacija.cs" />
+    <Compile Include="KontroleriForme\KontrolerForme.cs" />
+    <Compile Include="KontroleriForme\KontroleriUC\KontrolerUCDodavanjeFilma.cs" />
+    <Compile Include="KontroleriForme\KontroleriUC\KontrolerUCIznajmljivanje.cs" />
+    <Compile Include="KontroleriForme\KontroleriUC\KontrolerUCKorisnik.cs" />
+    <Compile Include="KontroleriForme\KontroleriUC\KontrolerUCOcena.cs" />
+    <Compile Include="KontroleriForme\KontroleriUC\KontrolerUCPretragaFilmova.cs" />
+    <Compile Include="KontroleriForme\KontroleriUC\KontrolerUCPretragaIznajmljivanja.cs" />
+    <Compile Include="KontroleriForme\LoginKontroler.cs" />
+    <Compile Include="Koordinator.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="UserControls\UCDodavanjeFilma.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCDodavanjeFilma.Designer.cs">
+      <DependentUpon>UCDodavanjeFilma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCKorisnik.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCKorisnik.Designer.cs">
+      <DependentUpon>UCKorisnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCKreiranjeIznajmljivanja.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCKreiranjeIznajmljivanja.Designer.cs">
+      <DependentUpon>UCKreiranjeIznajmljivanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCOcene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCOcene.Designer.cs">
+      <DependentUpon>UCOcene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCPretragaFilmova.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCPretragaFilmova.Designer.cs">
+      <DependentUpon>UCPretragaFilmova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCPretragaIznajmljivanja.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCPretragaIznajmljivanja.Designer.cs">
+      <DependentUpon>UCPretragaIznajmljivanja.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Klijent.resx">
+      <DependentUpon>Klijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserControls\UCDodavanjeFilma.resx">
+      <DependentUpon>UCDodavanjeFilma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCKorisnik.resx">
+      <DependentUpon>UCKorisnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCKreiranjeIznajmljivanja.resx">
+      <DependentUpon>UCKreiranjeIznajmljivanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCOcene.resx">
+      <DependentUpon>UCOcene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCPretragaFilmova.resx">
+      <DependentUpon>UCPretragaFilmova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCPretragaIznajmljivanja.resx">
+      <DependentUpon>UCPretragaIznajmljivanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{6FB5EF32-4AC9-4EB2-AF0A-11643C70A0E6}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
